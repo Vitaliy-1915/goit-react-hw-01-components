@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const DescriptionContainer = styled.div`
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
 `;
 
 export const Avatar = styled.img`

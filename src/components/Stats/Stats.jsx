@@ -1,22 +1,30 @@
-// import React from 'react'
+import React from 'react';
+import user from '../../data/user.json';
+import {
+  StatsList,
+  StatsItem,
+  StatsItemSpanLabel,
+  StatsItemSpanQuantity,
+} from './Stats.styles';
 
-// function Stats() {
-//     return (
-//         <ul class="stats">
-//             <li>
-//             <span class="label">Followers</span>
-//             <span class="quantity">1000</span>
-//             </li>
-//             <li>
-//             <span class="label">Views</span>
-//             <span class="quantity">2000</span>
-//             </li>
-//             <li>
-//             <span class="label">Likes</span>
-//             <span class="quantity">3000</span>
-//             </li>
-//         </ul>
-//     )
-// }
+function Stats() {
+  const { followers, views, likes } = user.stats;
+  return (
+    <StatsList>
+      <StatsItem>
+        <StatsItemSpanLabel>Followers</StatsItemSpanLabel>
+        <StatsItemSpanQuantity>{followers}</StatsItemSpanQuantity>
+      </StatsItem>
+      <StatsItem>
+        <StatsItemSpanLabel>Views</StatsItemSpanLabel>
+        <StatsItemSpanQuantity>{views}</StatsItemSpanQuantity>
+      </StatsItem>
+      <StatsItem>
+        <StatsItemSpanLabel>Likes</StatsItemSpanLabel>
+        <StatsItemSpanQuantity>{likes}</StatsItemSpanQuantity>
+      </StatsItem>
+    </StatsList>
+  );
+}
 
-// export default Stats
+export default Stats;
