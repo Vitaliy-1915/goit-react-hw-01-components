@@ -5,7 +5,6 @@ import {
   StatListItemLabel,
   StatListItemPercentage,
 } from './StatisticsList.styles';
-import '../../App.css';
 
 function StatisticsList({ stats }) {
   return (
