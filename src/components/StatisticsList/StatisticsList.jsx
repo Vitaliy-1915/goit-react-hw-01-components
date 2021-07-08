@@ -5,14 +5,15 @@ import {
   StatListItemLabel,
   StatListItemPercentage,
 } from './StatisticsList.styles';
+import '../../App.css';
 
 function StatisticsList({ stats }) {
   return (
     <StatList>
       {stats.map(stat => (
-        <StatListItem key={stat.id}>
+        <StatListItem className={stat.label} key={stat.id}>
           <StatListItemLabel>{stat.label}</StatListItemLabel>
-          <StatListItemPercentage>{stat.percentage}</StatListItemPercentage>
+          <StatListItemPercentage>{stat.percentage} %</StatListItemPercentage>
         </StatListItem>
       ))}
     </StatList>
