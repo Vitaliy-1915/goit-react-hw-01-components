@@ -19,7 +19,7 @@ export const FriendItems = styled.li`
 `;
 
 export const FriendItemsStatus = styled.span`
-  background-color: ${props => (props.isOnline ? 'red' : 'green')};
+  background-color: ${props => (props.className ? 'green' : 'red')};
 
   width: 15px;
   height: 15px;

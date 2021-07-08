@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 export const StatList = styled.ul`
   display: flex;
@@ -11,7 +12,23 @@ export const StatList = styled.ul`
   padding: 0;
 `;
 
+const dynamicStyle = props =>
+  css`
+    .docx {
+      background-color: grey ${props.className};
+    }
+    .pdf {
+      background-color: #a72f2f;
+    }
+
+    .mp3 {
+      background-color: #3133aa;
+    }
+  `;
+
 export const StatListItem = styled.li`
+  background-color: ${dynamicStyle};
+
   display: flex;
   flex-direction: column;
   justify-content: center;

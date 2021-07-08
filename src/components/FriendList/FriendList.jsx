@@ -12,7 +12,9 @@ function FriendList({ friends }) {
     <FriendLists>
       {friends.map(friend => (
         <FriendItems key={friend.id}>
-          <FriendItemsStatus>{friend.isOnline}</FriendItemsStatus>
+          <FriendItemsStatus className={friend.isOnline}>
+            {friend.isOnline}
+          </FriendItemsStatus>
           <FriendItemsAvatar
             src={friend.avatar}
             alt={friend.avatar}
