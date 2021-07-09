@@ -25,9 +25,10 @@ function TransactionHistorys({ items }) {
           </TransactionHistoryTableTheadTrTh>
         </TransactionHistoryTableTheadTr>
       </TransactionHistoryTableThead>
-      {items.map(item => (
-        <TransactionHistoryTableTbody key={item.id}>
-          <TransactionHistoryTableTbodyTr>
+
+      <TransactionHistoryTableTbody>
+        {items.map(item => (
+          <TransactionHistoryTableTbodyTr key={item.id}>
             <TransactionHistoryTableTbodyTrTd>
               {item.type}
             </TransactionHistoryTableTbodyTrTd>
@@ -38,8 +39,8 @@ function TransactionHistorys({ items }) {
               {item.currency}
             </TransactionHistoryTableTbodyTrTd>
           </TransactionHistoryTableTbodyTr>
-        </TransactionHistoryTableTbody>
-      ))}
+        ))}
+      </TransactionHistoryTableTbody>
     </TransactionHistoryTable>
   );
 }
