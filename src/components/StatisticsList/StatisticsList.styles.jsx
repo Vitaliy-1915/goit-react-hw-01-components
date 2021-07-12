@@ -15,7 +15,7 @@ export const StatList = styled.ul`
 const dynamicStyle = props =>
   css`
     .docx {
-      background-color: grey ${props.className};
+      background-color: grey;
     }
     .pdf {
       background-color: #a72f2f;
