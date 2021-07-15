@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 export const StatList = styled.ul`
   display: flex;
@@ -12,19 +11,31 @@ export const StatList = styled.ul`
   padding: 0;
 `;
 
-const dynamicStyle = props =>
-  css`
-    .docx {
-      background-color: grey;
-    }
-    .pdf {
-      background-color: #a72f2f;
-    }
+export const StatListItemLabel = styled.span`
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+`;
 
-    .mp3 {
-      background-color: #3133aa;
-    }
-  `;
+export const StatListItemPercentage = styled.span`
+  font-weight: bold;
+  color: #000;
+`;
+
+const dynamicStyle = ({ className }) => {
+  switch (className) {
+    case '.docx':
+      return '#af71a2';
+    case '.pdf':
+      return '#b17070';
+    case '.mp3':
+      return '#7879b1';
+    case '.psd':
+      return '#7cb1ae';
+    default:
+      return '#000';
+  }
+};
 
 export const StatListItem = styled.li`
   background-color: ${dynamicStyle};
@@ -40,15 +51,4 @@ export const StatListItem = styled.li`
   :last-child {
     border-bottom-right-radius: 5px;
   }
-`;
-
-export const StatListItemLabel = styled.span`
-  font-weight: normal;
-  font-size: 12px;
-  color: #000;
-`;
-
-export const StatListItemPercentage = styled.span`
-  font-weight: bold;
-  color: #000;
 `;
